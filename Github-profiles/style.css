@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #4ca1af; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #c4e0e5,
+    #4ca1af
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #c4e0e5,
+    #4ca1af
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+input {
+  background-color: linear-gradient(to right, #8cbcc4, #135963);
+  box-shadow: 0 5px 10px rgba(3, 13, 52, 0.05), 0 15px 40px rgba(5, 15, 52, 0.2);
+  border-radius: 10px;
+  border: none;
+  color: rgb(145, 141, 141);
+  font-family: inherit;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+input:focus {
+  outline: none;
+}
+
+.card {
+  background: linear-gradient(to right, #8cbcc4, #135963);
+  border-radius: 20px;
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(3, 13, 52, 0.05), 0 15px 40px rgba(5, 15, 52, 0.2);
+  max-width: 800px;
+}
+
+/*.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}*/
+
+.avatar {
+  border: 10px solid #c4e0e5;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.user-info {
+  margin-left: 2rem;
+  color: #ddd;
+}
+
+.user-info h2 {
+  margin-top: 0;
+  font-weight: bolder;
+}
+
+.user-info ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style-type: none;
+  max-width: 400px;
+}
+
+.user-info ul li {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.repo {
+  background-color: #135963;
+  display: inline-block;
+  color: white;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  text-decoration: none;
+  margin-bottom: 0.3rem;
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #4ca1af; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #c4e0e5,
+    #4ca1af
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #c4e0e5,
+    #4ca1af
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mobile-container {
+  background-color: white;
+  width: 400px;
+  box-shadow: 0 0 10px 2px #3333331a;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header input {
+  background-color: #eee;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+}
+
+header button {
+  background-color: transparent;
+  color: #aaa;
+  border: none;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.fav-container {
+  background-color: rgb(237, 173, 11);
+  padding: 0.2rem 1rem;
+  text-align: center;
+}
+.fav-meals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.fav-meals li {
+  cursor: pointer;
+  margin: 5px;
+  width: 75px;
+}
+.fav-meals li .remove-fav {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  opacity: 0;
+  top: 2rem;
+  right: -2.2rem;
+  font-size: 1.2rem;
+}
+.fav-meals li:hover .remove-fav {
+  opacity: 1;
+}
+
+.fav-meals li img {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px #3333331a;
+  object-fit: cover;
+  height: 70px;
+  width: 70px;
+}
+
+.fav-meals li span {
+  display: inline-block;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 75px;
+}
+.fav-meals li:hover span {
+  white-space: normal;
+  overflow: visible;
+}
+
+.meal {
+  margin: 1.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px #3333331a;
+}
+
+.meal-header {
+  position: relative;
+}
+
+.meal-header .random {
+  position: absolute;
+  top: 1rem;
+  background-color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.meal-header img {
+  height: 250px;
+  width: 100%;
+}
+
+.meal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.meal-body h4 {
+  margin: 0;
+}
+
+.meal-body .fav-btn {
+  background-color: transparent;
+  border: none;
+  color: rgb(165, 161, 161);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.meal-body .fav-btn.active {
+  color: rebeccapurple;
+}
+
+.popup-container {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.popup-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 0 2rem;
+  position: relative;
+  border: 5px;
+  border-radius: 5px;
+  overflow: scroll;
+  max-width: 600px;
+  max-height: 100vh;
+  width: 100%;
+}
+.meal-info h1 {
+  text-align: center;
+}
+.meal-info img {
+  height: 500px;
+  width: 100%;
+}
+
+.popup .close-popup {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
